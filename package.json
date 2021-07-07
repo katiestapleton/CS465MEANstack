@@ -9,11 +9,32 @@
     "bootstrap": "^5.0.2",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "express": "~4.16.1",
+    "express": "^4.16.4",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "node": "^16.4.0",
     "nodemon": "^2.0.9"
-  }
+  },
+  "description": "Full-stack MEAN website for travel agency",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katiestapleton/CS465MEANstack.git"
+  },
+  "keywords": [
+    "travel",
+    "agency",
+    "travel",
+    "trips",
+    "vacation",
+    "get-aways",
+    "locations"
+  ],
+  "author": "Katie Stapleton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katiestapleton/CS465MEANstack/issues"
+  },
+  "homepage": "https://github.com/katiestapleton/CS465MEANstack#readme"
 }
