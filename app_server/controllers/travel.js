@@ -1,6 +1,7 @@
 // GET travel view
 const travel = (req, res) => { 
-    res.render('travel', { title: 'Travlr Getaways' }); 
+    pageTitle = process.env.npm_packages_websiteTitle + ' - Travel';
+    res.render('travel', { title: pageTitle}); 
 };
 
 module.exports = {

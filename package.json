@@ -1,6 +1,6 @@
 {
   "name": "meanstack",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -16,6 +16,7 @@
     "node": "^16.4.0",
     "nodemon": "^2.0.10"
   },
+  "websiteTitle": "Travel Getaways",
   "description": "Full-stack MEAN website for travel agency",
   "main": "app.js",
   "repository": {
@@ -36,5 +37,6 @@
   "bugs": {
     "url": "https://github.com/katiestapleton/CS465MEANstack/issues"
   },
-  "homepage": "https://github.com/katiestapleton/CS465MEANstack#readme"
+  "homepage": "https://github.com/katiestapleton/CS465MEANstack#readme",
+  "devDependencies": {}
 }
