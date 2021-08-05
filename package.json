@@ -12,6 +12,7 @@
     "express": "^4.16.4",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
+    "mongoose": "^5.13.5",
     "morgan": "~1.9.1",
     "node": "^16.4.0",
     "nodemon": "^2.0.10"
@@ -37,6 +38,5 @@
   "bugs": {
     "url": "https://github.com/katiestapleton/CS465MEANstack/issues"
   },
-  "homepage": "https://github.com/katiestapleton/CS465MEANstack#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/katiestapleton/CS465MEANstack#readme"
 }
