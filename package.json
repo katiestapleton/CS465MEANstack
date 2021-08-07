@@ -15,7 +15,8 @@
     "mongoose": "^5.13.5",
     "morgan": "~1.9.1",
     "node": "^16.4.0",
-    "nodemon": "^2.0.10"
+    "nodemon": "^2.0.10",
+    "seedgoose": "^2.0.2"
   },
   "websiteTitle": "Travel Getaways",
   "description": "Full-stack MEAN website for travel agency",
