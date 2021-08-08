@@ -10,7 +10,7 @@ require('./app_api/models/db');
 const indexRouter = require('./app_server/routes/index');
 const travelRouter = require('./app_server/routes/travel');   
 const usersRouter = require('./app_server/routes/users');
-const apiRouter = require('/app_api/routes/index');
+const apiRouter = require('./app_api/routes/index');
 
 //const { hasSubscribers } = require('diagnostic_channel');
 const app = express();
