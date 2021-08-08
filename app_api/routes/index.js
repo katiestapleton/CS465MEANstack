@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 // multiple controllers possibly. assign unique names
-const tripsMain = require('../controllers/main');
+const tripsController = require('../controllers/trips');
 
 /* GET home page. */
 router
