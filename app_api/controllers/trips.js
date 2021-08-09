@@ -22,7 +22,7 @@ const tripsList = async (req, res) => {
             }
         });
 };            
-/*
+
 // retrieve single trip
 const tripsFindByCode = async (req, res) => {
     model
@@ -44,8 +44,8 @@ const tripsFindByCode = async (req, res) => {
             }
         });
 };            
-*/
+
 module.exports = {
-    tripsList//,
-    //tripsFindByCode
+    tripsList,
+    tripsFindByCode
 };
