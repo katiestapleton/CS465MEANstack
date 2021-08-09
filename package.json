@@ -16,6 +16,7 @@
     "morgan": "~1.9.1",
     "node": "^16.4.0",
     "nodemon": "^2.0.10",
+    "request": "^2.88.2",
     "seedgoose": "^2.0.2"
   },
   "websiteTitle": "Travel Getaways",
