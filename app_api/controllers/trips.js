@@ -23,10 +23,10 @@ const tripsList = async (req, res) => {
         });
 };            
 
-// retrieve single trip
+// retrieve single trip using trip code
 const tripsFindByCode = async (req, res) => {
     model
-        .find({'code' : req.params.tripCode })   // blank filter to find all trips
+        .find({'code' : req.params.tripCode})
         .exec((err, trips) => {
             if(!trips) {
                 return res
