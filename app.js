@@ -11,6 +11,7 @@ const indexRouter = require('./app_server/routes/index');
 const travelRouter = require('./app_server/routes/travel');   
 const usersRouter = require('./app_server/routes/users');
 const apiRouter = require('./app_api/routes/index');
+const { Types } = require('mongoose');
 
 //const { hasSubscribers } = require('diagnostic_channel');
 const app = express();
@@ -27,6 +28,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/api', (req, res, next) => {
+  res.header('Acess-Control-Allow-Origin', 'http://localhost:4200');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  next();
+});
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
