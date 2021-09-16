@@ -12,6 +12,7 @@ export class TripDataService {
   private apiBaseUrl = 'http://localhost:3000/api/';
   private tripURL = `${this.apiBaseUrl}trips/`
 
+  // read ALL trips
   public getTrips(): Promise<Trip[]> {
     console.log('Inside TripDataService#getTrips');
     //let URI = `${this.apiBaseUrl}/trips/`;
@@ -22,6 +23,17 @@ export class TripDataService {
       .catch(this.handleError);
   }
 
+  // read SINGLE trip
+  public getTrip(tripCode: string): Promise<Trip> {
+    console.log('Inside TripDataService#getTrip(tripCode)');
+    return this.http
+      .get(this.tripURL + tripCode)
+      .toPromise()
+      .then(response => response as Trip)
+      .catch(this.handleError);
+    }
+
+
 public addTrip(form: Trip): Promise<Trip> {
   console.log('Inside tripdataservicesTS@addtip')
   return this.http
@@ -30,6 +42,16 @@ public addTrip(form: Trip): Promise<Trip> {
   .then(response => response as Trip[])
   .catch(this.handleError);
 }
+
+public updateTrip(formData: Trip): Promise<Trip> {
+  console.log('Inside TripDataService#upateTrip');
+  console.log(formData);
+  return this.http
+    .put(this.tripURL + formData.code, formData)
+    .toPromise()
+    .then(response => response as Trip[])
+    .catch(this.handleError);
+  }
 
   private handleError(error: any): Promise<any> {
     console.error('Something has gone wrong', error);
