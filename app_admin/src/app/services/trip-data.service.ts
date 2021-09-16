@@ -22,6 +22,15 @@ export class TripDataService {
       .catch(this.handleError);
   }
 
+public addTrip(form: Trip): Promise<Trip> {
+  console.log('Inside tripdataservicesTS@addtip')
+  return this.http
+  .post(this.tripURL, FormData)
+  .toPromise()
+  .then(response => response as Trip[])
+  .catch(this.handleError);
+}
+
   private handleError(error: any): Promise<any> {
     console.error('Something has gone wrong', error);
     return Promise.reject(error.message || error);
