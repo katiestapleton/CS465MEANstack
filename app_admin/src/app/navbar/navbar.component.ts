@@ -16,7 +16,8 @@ import { AuthenticationService } from '../services/authentication.service';
       return this.authenticationService.isLoggedIn();
   }
 
-  private onLogout(): void {
+  //private
+  onLogout(): void {
   return this.authenticationService.logout();
   }
 }

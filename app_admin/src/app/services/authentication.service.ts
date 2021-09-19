@@ -11,11 +11,15 @@ export class AuthenticationService {
 
   constructor(
     @Inject(BROWSER_STORAGE) private storage: Storage,
-private tripDataService: TripDataService
-) { }
+    private tripDataService: TripDataService
+  ) { }
+
 public getToken(): string {
-  return this.storage.getItem('travlr-token');
+  // string null error. recommended by stackoverflowhttps:  stackoverflow.com/questions/46915002/argument-of-type-string-null-is-not-assignable-to-parameter-of-type-string
+  
+  return this.storage.getItem('travlr-token') || '{}';
 }
+
 public saveToken(token: string): void {
   this.storage.setItem('travlr-token', token);
 }
@@ -45,10 +49,12 @@ public isLoggedIn(): boolean {
 }
 
 public getCurrentUser(): User {
-  if (this.isLoggedIn()) {
-  const token: string = this.getToken();
-  const { email, name } = JSON.parse(atob(token.split('.')[1]));
-  return { email, name } as User;
-  }
+    if (this.isLoggedIn()) {
+      const token: string = this.getToken();
+      const { email, name } = JSON.parse(atob(token.split('.')[1]));
+      return { email, name } as User;
+      }
+      // string null error recommended by compiler to resolve issue
+      return { email: null, name: null } as unknown as User;
   }
 }
